@@ -1,0 +1,46 @@
+(defsrc     
+	    esc
+		 q   w   e   r   t   y 
+	   caps  a   s   d   f   g   h   j   k   l 
+)
+
+(defcfg
+	process-unmapped-keys yes
+)
+
+
+(defvar
+	tap-time 200
+	hold-time 200
+)
+
+(defalias
+	
+	qm(tap-hold $tap-time $hold-time q prev )
+	wm(tap-hold $tap-time $hold-time w pp )
+	em(tap-hold $tap-time $hold-time e next )
+	rm(tap-hold $tap-time $hold-time r mute )
+	tm(tap-hold $tap-time $hold-time t volu )
+	ym(tap-hold $tap-time $hold-time y vold )
+
+	am(tap-hold $tap-time $hold-time a lalt )
+	sm(tap-hold $tap-time $hold-time s lctl )
+	dm(tap-hold $tap-time $hold-time d lsft )
+	fm(tap-hold $tap-time $hold-time f lmet )
+
+	gm(tap-hold $tap-time $hold-time g mlft)
+
+	hm(tap-hold $tap-time $hold-time h left )
+	jm(tap-hold $tap-time $hold-time j down )
+	km(tap-hold $tap-time $hold-time k up )
+	lm(tap-hold $tap-time $hold-time l right )
+)
+
+
+
+(deflayer main
+	caps
+	    @qm @wm @em @rm @tm @ym
+	esc @am @sm @dm @fm @gm @hm @jm @km @lm
+)
+
