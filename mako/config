@@ -1,0 +1,5 @@
+default-timeout=5000
+font=Cascadia Mono Light 9
+background-color=#32204990
+border-color=#8D69CA
+border-radius=15
